@@ -1,5 +1,5 @@
 FROM python:3
-WORKDIR /demo
+WORKDIR /http
 
 COPY main.py .
 
@@ -7,6 +7,6 @@ RUN chmod +x main.py && python3 main.py init cf && chmod +x ./*
 
 EXPOSE 8080
 
-CMD ["python3", "main.py", "run"]
+CMD ["python3", "main.py", "start"]
 
 USER 10001
